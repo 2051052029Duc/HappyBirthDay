@@ -279,7 +279,7 @@ body{
 }
 .show-item{
     width: 40%;
-    height: 25%;
+    height: fit-content;
     margin: auto;
     background-color: #fff;
     display: flex;
@@ -300,4 +300,73 @@ body{
 }
 .active{
     display: block;
+}
+
+@media only screen and (max-width: 1024px){
+    .balloon-top > div,
+    .balloon-bottom > div{
+        padding: 30px;
+    }
+    .balloon-top > div::after,
+    .balloon-bottom > div::after{
+        top: 85%;
+        right: 36px;
+    }
+    .show-item{
+        width: 70%;
+    }
+    .wish{
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .balloon-top > div,
+    .balloon-bottom > div{
+        padding: 20px;
+    }
+    .balloon-top > div::after,
+    .balloon-bottom > div::after{
+        top: 83%;
+        right: 25px;
+    }
+    .show-item{
+        width: 70%;
+    }
+    .wish{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .balloon-top > div,
+    .balloon-bottom > div{
+        padding: 10px;
+        border-radius: 50% 50% 50% 50%;
+    }
+    .balloon-top > div::after,
+    .balloon-bottom > div::after{
+        top: 70%;
+        right: 12px;
+    }
+    .charA, .charH, .charP, .charD, .charB, .charI, .charR, .charT, .charY {
+        font-size: 25px;
+    }
+    .avatar {
+        width: 200px; 
+        height: 200px;
+        margin: 30px auto
+    }
+    .avatar > img {
+        width: 100%;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .text{
+        font-size: 20px;
+    }
+    .show-item{
+        width: 70%;
+    }
+    .wish{
+        font-size: 15px;
+    }
 }
